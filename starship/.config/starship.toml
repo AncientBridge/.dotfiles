@@ -1,0 +1,130 @@
+add_newline = false
+
+[line_break]
+#disabled = true
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+style = "green"
+read_only = " "
+truncation_length = 0
+#format = "[$path]($style)[$read_only]($read_only_style) "
+truncate_to_repo = true
+truncation_symbol = ".../"
+
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+
+style="purple"
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+#[memory_usage]
+#symbol = " "
+#disabled = false
+#threshold = -1
+#format = "Memory $symbol [${ram} ${swap}]($style) "
+
+[meson]
+symbol = "喝 "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "ﳒ "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+
+
+[username]
+show_always = true
+style_user = "green bold"
+style_root = "red bold"
+format = "Alex($style) "
+disabled = false
+
+
+
+[git_status]
+#conflicted = "⚔️ "
+#ahead = "🏎️ 💨 ×${count}"
+#behind = "🐢 ×${count}"
+#diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+#untracked = "🛤️  ×${count}"
+#stashed = "📦 "
+#modified = "📝 ×${count}"
+#staged = "🗃️  ×${count}"
+#renamed = "📛 ×${count}"
+#deleted = "🗑️  ×${count}"
+#style = "magenta"
+#format = "$all_status$ahead_behind"
+
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+

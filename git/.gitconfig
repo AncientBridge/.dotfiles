@@ -1,0 +1,6 @@
+[user]
+	name = AncientBridge
+	email = teodorescu97@gmail.com
+[core]
+        excludesfile = ~/.gitignore_global  
+        editor =nvim
