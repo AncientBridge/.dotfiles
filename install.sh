@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Author    Teodorescu Alexandru Florentin
 # For the fonts
@@ -32,7 +32,7 @@ homebrew_install()
 
 read -p "Open and install fira font nerds ? (y/n)" -n 1 answer
 echo
-if[[$answer == "y" || $answer == "Y"]];then
+if [[ $answer == "y" || $answer == "Y" ]];then
 open ~/.dotfiles/Fira\ Code\ Retina\ Nerd\ Font\ Complete.ttf
 fi
 
@@ -42,7 +42,12 @@ fi
 xcode-select --install
 test -x brew || homebrew_install
 
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> .zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> .zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 #Fish shell
+
 read -p "Install Fish Shell ? (y/n) " -n 1 answer
 echo
 if [[ $answer == "y" || $answer == "Y" ]]; then
@@ -52,6 +57,7 @@ chsh -s /opt/homebrew/bin/fish
 fish_add_path /opt/homebrew/bin
 fi
 
+Echo "Fish installed"
 
 #Programs installs
 brew install stow
