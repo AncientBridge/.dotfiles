@@ -28,13 +28,6 @@ homebrew_install()
   fi
 }
 
-#Font setup 
-
-read -p "Open and install fira font nerds ? (y/n)" -n 1 answer
-echo
-if [[ $answer == "y" || $answer == "Y" ]];then
-open ~/.dotfiles/Fira\ Code\ Retina\ Nerd\ Font\ Complete.ttf
-fi
 
 
 #Xcode and Brew Setup
@@ -42,8 +35,8 @@ fi
 xcode-select --install
 test -x brew || homebrew_install
 
-echo '# Set PATH, MANPATH, etc., for Homebrew.' >> .zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> .zprofile
+echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #Fish shell
@@ -56,6 +49,7 @@ sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
 chsh -s /opt/homebrew/bin/fish
 fish_add_path /opt/homebrew/bin
 fi
+echo 'eval "$(fish_add_path /opt/homebrew/bin)"' >> ~/.config/fish/config.fish
 
 Echo "Fish installed"
 
@@ -76,6 +70,14 @@ brew install --cask alfred
 
 
 clear
+#Font setup 
+
+read -p "Open and install fira font nerds ? (y/n)" -n 1 answer
+echo
+if [[ $answer == "y" || $answer == "Y" ]];then
+open ~/.dotfiles/Fira\ Code\ Retina\ Nerd\ Font\ Complete.ttf
+fi
+
 
 echo "Setup finished"
 echo "--------------"
