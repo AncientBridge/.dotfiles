@@ -67,6 +67,7 @@ brew install --cask google-chrome
 brew install --cask istat-menus
 brew install --cask slack
 brew install --cask alfred
+brew install --cask obsidian
 
 
 clear
